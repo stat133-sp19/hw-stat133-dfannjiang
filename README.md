@@ -2,7 +2,7 @@
 
 Private Repository for HW assignments of Stat 133 (Spring 2019)
 
-- Name: Dominic Fannjaing
+- Name: Dominic Fannjiang
 - Github username: dfannjiang
 - Email: dfannjiang@gmail.com
 - Lab section: 112
