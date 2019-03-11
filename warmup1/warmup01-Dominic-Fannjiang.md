@@ -1,0 +1,134 @@
+warmup01-Dominic-Fannjiang
+================
+Dominic Fannjiang
+1/31/2019
+
+# Star Wars
+
+## Obi-Wan Kenobi
+
+<center>
+
+[![Obi-Wan
+Kenobi](https://vignette.wikia.nocookie.net/starwars/images/1/1a/Kenobi-EpIII.jpg/revision/latest/scale-to-width-down/265?cb=20061222182112)](https://vignette.wikia.nocookie.net/starwars/images/1/1a/Kenobi-EpIII.jpg/revision/latest/scale-to-width-down/265?cb=20061222182112 "Obi-Wan Kenobi")
+
+</center>
+
+A famous quote by Obi-Wan Kenobi:
+
+> *It’s over Anakin\! I have the high ground*
+
+| Description | Value       |
+| ----------- | ----------- |
+| Species     | Human       |
+| Gender      | Male        |
+| Height      | 1.82 Meters |
+
+<br>
+
+# Cooking Recipe
+
+## Baklava Babka
+
+<center>
+
+[![Babka](https://smittenkitchendotcom.files.wordpress.com/2018/12/baklava-babka-1.jpg?w=1024)](https://smittenkitchendotcom.files.wordpress.com/2018/12/baklava-babka-1.jpg?w=1024 "Baklava Babka")
+
+</center>
+
+### Ingredients
+
+#### Dough
+
+  - 6 tablespoons (85 grams) unsalted butter, melted and cooled
+  - 3/4 cup (175 ml) whole or low-fat milk
+  - 3 1/2 teaspoons (11 grams) instant yeast
+  - 3/4 cup (150 grams) granulated sugar
+  - 3 large eggs
+  - 1 1/2 teaspoons vanilla extract
+  - 4 1/2 cups (585 grams) all-purpose flour
+  - 1 teaspoon fine sea salt
+
+#### Filling
+
+  - 2/3 cup (135 grams) granulated sugar
+  - 1 1/2 teaspoons ground cinnamon
+  - 2 cups (about 250 grams or 9 ounces) mixed nuts
+  - Finely grated zest of half a lemon or orange
+  - A few pinches of sea salt
+  - 1 teaspoon vanilla extract
+  - 1/4 to 1/2 teaspoon rose water or orange flower water (optional, to
+    taste)
+  - 1/8 teaspoon ground cloves and/or cardamom (optional)
+  - 1/3 cup (75 grams) unsalted butter, melted
+
+#### Honey Syrup
+
+  - 3/4 cup (250 grams) honey, any kind you like
+  - 3/4 cup (175 ml) water
+  - Pinch of sea salt
+
+### Special Kitchen Equipment
+
+  - One tube pan
+  - Food Processor
+
+### Directions
+
+1.  Make the dough: Mix butter, milk, yeast, sugar, eggs, vanila, flour,
+    and salt. Mix until smooth and set aside for 1 to 2 hours to let it
+    rise.
+2.  Make the filling: Combine cinnamon and sugar and set aside. Combine
+    nuts, salt, vanilla, and zest in food processor until finely chopped
+    and set aside.
+3.  Prepare pan: Coat the tube pan with butter or non-stick spray.
+4.  Assemble babka: Roll out dough. Brush dough with melted butter.
+    Sprinkle with the cinnamon sugar. Spring the ground nuts. Roll up
+    the dough into a long, tight tube. Seal the ends. Cut tube in half
+    and lay the two pieces parallel and next to each other. Put one tube
+    over the other to make a twist between the 2 pieces and after that’s
+    done, pinch the ends together. Put the twisted dough into the tube
+    pan.
+5.  Cover pan with plastic wrap and let rise in a warm place for about
+    45 minutes.
+6.  Heat oven to 350 degrees Fahrenheit.
+7.  Bake babka for 30-40 minutes, or until tops are a deep golden brown.
+8.  Make syrup: Combine honey, water, and a pinch of salt in a saucepan
+    and bring to boil. Reduce to simmer and cook until reduced by 1/3.
+    Pour and brush the syrup all over the babka.
+9.  Let babka cool until lukewarm.
+
+### Notes
+
+  - If you only have active dry yeast (instead of instant yeast), then
+    replace half the milk with water. Warm water to 110 degrees
+    Fahrenheit and stir yeast into it and set aside for 5-10 minutes,
+    after which it will be slightly foamy. Then proceed as written.
+  - The recipe works great with other nut and flavor compositions
+    (i.e. using other spices besides cinnamon and different kinds of
+    nuts).
+  - The recipe is great for all seasons\!
+
+<br>
+
+# Euclidean Distance
+
+## Definition
+
+-----
+
+The **Euclidean distance** between points **p** and **q** is the length
+of the line segment connection them (\(\overline{\mathbf{pq}}\)). In
+Caretesian coordinates, if **p** = \((p_1, p_2, ..., p_n)\) and **q** =
+\((q_1, q_2, ..., q_n)\) are two points in Euclidean \(n\)-space, then
+the distance (d) from **p** to **q**, or from **q** to **p** is given by
+the Pythagorean formula:
+\[d(\mathbf{p}, \mathbf{q}) = d(\mathbf{q}, \mathbf{p}) = \sqrt{(q_1-p_1)^2+(q_2-p_2)^2+...+(q_n-p_n)^2}\\
+=\sqrt{\sum_{i=1}^n(q_i-p_i)^2}\] The position of a point in a Euclidean
+\(n\)-space is a Euclidean vector. So, **p** and **q** may be
+represented as Euclidean vectors, starting from the origin of the space
+(initial point) with their tips (terminal points) ending at the two
+points. The Euclidean norm, or **Euclidean length**, or **magnitude** of
+a vector measures the length of the vector:
+\[||\mathbf{p}||=\sqrt{p_1^2+p_2^2+...+p_n^2} = \sqrt{\mathbf{p}\cdot\mathbf{p}},\]
+where the last expression involves the dot product.
