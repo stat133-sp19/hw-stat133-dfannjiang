@@ -1,3 +1,4 @@
+# Description of Variables
 `team_name`: The name of the player's NBA team.
 `game_data`: The date of the NBA game. 
 `season`: The NBA season. 
