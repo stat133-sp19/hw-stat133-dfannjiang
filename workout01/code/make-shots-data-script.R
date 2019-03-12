@@ -65,3 +65,5 @@ write.csv(all_data, file=paste0(data_path, 'shots-data.csv'), row.names=FALSE)
 sink(file=paste0(output_path, 'shots-data-summary.txt'))
 summary(all_data)
 sink()
+
+
