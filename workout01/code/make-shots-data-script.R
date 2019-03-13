@@ -1,11 +1,24 @@
-##################################################
-## Title: GSW Shot Charts
-## Description: Analyzes the shot patterns of GSW players. 
-## Inputs:
-## Outputs:
-##################################################
+#######################################################################
+## Title: Data Preparation
+## Description: Prepares and cleans NBA shot data for some GSW players. 
+## Inputs: The following files in the ../data/ directory
+##          andre-iguodala.csv
+##          draymond-green.csv
+##          kevin-durant.csv
+##          klay-thompson.csv
+##          stephen-curry.csv
+## Outputs: Summaries of the data in each of the csv files in the 
+##          ../output/ directory, summary of the data in all of the csv 
+##          files in the ../output/ directory, and a csv file of all of
+##          the data in the ../data/ directory. 
+#######################################################################
 library(tibble)
 
+# relative paths for the data and output folders. 
+data_path <- '../data/'
+output_path <- '../output/'
+
+# csv file names
 filenames <- c(
   'andre-iguodala',
   'draymond-green',
@@ -13,6 +26,8 @@ filenames <- c(
   'klay-thompson',
   'stephen-curry'
 )
+
+# names of the players in proper format
 players <- c(
   'Andre Iguodala',
   'Draymond Green',
@@ -20,8 +35,8 @@ players <- c(
   'Klay Thompson',
   'Stephen Curry'
 )
-data_path <- '../data/'
-output_path <- '../output/'
+
+# data types for each column in the csv files
 col_types <- c(
   'factor', # team_name
   'character', # game_date
@@ -38,6 +53,7 @@ col_types <- c(
   'real' # y
 )
 
+# Read and clean and prepare data from each csv file
 for (i in 1:length(filenames)) {
   p = filenames[i]
   f = paste0(data_path, p, '.csv')
@@ -49,6 +65,7 @@ for (i in 1:length(filenames)) {
   dat$shot_made_flag <- as.factor(dat$shot_made_flag)
   dat$minute <- 12*(dat$period - 1) + (12 - dat$minutes_remaining)
   
+  # write summary of the data from each csv file to the output folder
   sink(file=paste0(output_path, p, '-summary.txt'))
   print(summary(dat))
   sink()
@@ -61,7 +78,11 @@ for (i in 1:length(filenames)) {
 }
 
 all_data <- tibble(all_data)
+
+# write all data to a csv file in the data folder
 write.csv(all_data, file=paste0(data_path, 'shots-data.csv'), row.names=FALSE)
+
+# write summary of the data from all csv files to the output folder
 sink(file=paste0(output_path, 'shots-data-summary.txt'))
 summary(all_data)
 sink()
