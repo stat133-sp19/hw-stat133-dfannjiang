@@ -1,30 +1,78 @@
 ---
-title: "workout01-Dominic-Fannjiang"
+title: "Workout 1"
 author: "Dominic Fannjiang"
-date: "3/11/2019"
-output: github_document
+output: html_document
 ---
+```{r, echo=F, results='hide', message=FALSE}
+library(dplyr)
+library(knitr)
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+# data types for each column in the csv files
+col_types <- c(
+  'factor', # team_name
+  'character', # game_date
+  'integer', # season 
+  'integer', # period
+  'integer', # minutes_remaining
+  'integer', # seconds_remaining
+  'factor', # shot_made_flag
+  'factor', # action_type
+  'factor', # shot_type
+  'integer', # shot_distance
+  'factor', # opponent
+  'real', # x
+  'real', # y
+  'character', # name
+  'integer' # minute
+)
+
+shot_data <- read.csv('../data/shots-data.csv', 
+                      colClasses=col_types,
+                      stringsAsFactors=F)
+```
+```{r, echo=F}
+kable(
+  arrange(
+    summarise(
+      group_by(shot_data[shot_data$shot_type == '2PT Field Goal',], name),
+      total = length(shot_made_flag),
+      made = sum(shot_made_flag == 'shot_yes'),
+      perc_made = made/total
+    ), 
+    desc(perc_made)
+  )
+)
 ```
 
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+```{r, echo=F}
+kable(
+  arrange(
+    summarise(
+      group_by(shot_data[shot_data$shot_type == '3PT Field Goal',], name),
+      total = length(shot_made_flag),
+      made = sum(shot_made_flag == 'shot_yes'),
+      perc_made = made/total
+    ), 
+    desc(perc_made)
+  )
+)
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r, echo=F}
+kable(
+  arrange(
+    summarise(
+      group_by(shot_data, name),
+      total = length(shot_made_flag),
+      made = sum(shot_made_flag == 'shot_yes'),
+      perc_made = made/total
+    ), 
+    desc(perc_made)
+  )
+)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```{r out.width='80%', echo=F, fig.align='center'}
+knitr::include_graphics('../images/gsw-shot-charts.png')
+```
+

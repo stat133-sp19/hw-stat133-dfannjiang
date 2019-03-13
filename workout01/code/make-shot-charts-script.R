@@ -58,8 +58,9 @@ shot_chart <- ggplot(data = all_data) +
   annotation_custom(court_image, -250, 250, -50, 420) + 
   geom_point(aes(x = x, y = y, color = shot_made_flag)) + 
   ylim(-50, 420) +
-  ggtitle('Shot Charts: GSW (2016 Season)') + 
   facet_wrap(~name) +
+  labs(title='Shot Charts: GSW (2016 Season)\n', x='', y='', color = "Shot Made\n") +
+  scale_color_hue(labels = c('No', 'Yes')) +
   theme_minimal()
 ggsave(paste0(img_path, 'gsw-shot-charts.pdf'), width=8, height=7)
 ggsave(paste0(img_path, 'gsw-shot-charts.png'), width=8, height=7)
