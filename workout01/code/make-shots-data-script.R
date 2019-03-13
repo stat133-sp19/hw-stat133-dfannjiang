@@ -1,17 +1,19 @@
-#######################################################################
+#####################################################################################
 ## Title: Data Preparation
 ## Description: Prepares and cleans NBA shot data for some GSW players. 
-## Inputs: The following files in the ../data/ directory
-##          andre-iguodala.csv
-##          draymond-green.csv
-##          kevin-durant.csv
-##          klay-thompson.csv
-##          stephen-curry.csv
+## Inputs: The following data files in the '../data/' directory
+##          'andre-iguodala.csv'
+##          'draymond-green.csv'
+##          'kevin-durant.csv'
+##          'klay-thompson.csv'
+##          'stephen-curry.csv'
+##          These files can be downloaded from the root url:
+##          https://raw.githubusercontent.com/ucb-stat133/stat133-hws/master/data/
 ## Outputs: Summaries of the data in each of the csv files in the 
-##          ../output/ directory, summary of the data in all of the csv 
-##          files in the ../output/ directory, and a csv file of all of
-##          the data in the ../data/ directory. 
-#######################################################################
+##          '../output/' directory, summary of the data in all of the csv 
+##          files in the '../output/' directory, and a csv file of all of
+##          the data in the '../data/' directory called 'shots-data.csv'. 
+#####################################################################################
 library(tibble)
 
 # relative paths for the data and output folders. 
