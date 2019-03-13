@@ -66,7 +66,7 @@ for (i in 1:length(filenames)) {
   dat$minute <- 12*(dat$period - 1) + (12 - dat$minutes_remaining)
   
   # write summary of the data from each csv file to the output folder
-  sink(file=paste0(output_path, p, '-summary.txt'))
+  sink(paste0(output_path, p, '-summary.txt'))
   print(summary(dat))
   sink()
   
@@ -83,8 +83,13 @@ all_data <- tibble(all_data)
 write.csv(all_data, file=paste0(data_path, 'shots-data.csv'), row.names=FALSE)
 
 # write summary of the data from all csv files to the output folder
-sink(file=paste0(output_path, 'shots-data-summary.txt'))
-summary(all_data)
+sink(paste0(output_path, 'shots-data-summary.txt'))
+print(summary(all_data))
 sink()
+
+# make sure to close all sinks
+for (i in seq_len(sink.number())) {
+  sink()
+}
 
 
