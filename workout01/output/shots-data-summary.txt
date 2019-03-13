@@ -1,12 +1,24 @@
-
-> print(summary(all_data))
-      all_data.team_name             all_data.game_date               all_data.season                all_data.period          all_data.minutes_remaining     all_data.seconds_remaining       all_data.shot_made_flag         all_data.action_type            all_data.shot_type           all_data.shot_distance            all_data.opponent                 all_data.x                     all_data.y                    all_data.name                 all_data.minute       
- Golden State Warriors:4334     Length:4334                    Min.   :2016                   Min.   :1.000000               Min.   : 0.000000              Min.   : 0.00000               shot_no :2243                  Jump Shot          :2051       2PT Field Goal:2402            Min.   : 0.0000                Houston Rockets       : 271    Min.   :-248.00000             Min.   :-39.0000               Length:4334                    Min.   : 1.00000             
- NA                             Class :character               1st Qu.:2016                   1st Qu.:1.000000               1st Qu.: 2.000000              1st Qu.:13.00000               shot_yes:2091                  Pullup Jump shot   : 521       3PT Field Goal:1932            1st Qu.: 2.2500                Sacramento Kings      : 249    1st Qu.: -56.00000             1st Qu.: 13.0000               Class :character               1st Qu.:11.00000             
- NA                             Mode  :character               Median :2016                   Median :2.000000               Median : 5.000000              Median :29.00000               NA                             Layup Shot         : 215       NA                             Median :19.0000                Los Angeles Clippers  : 246    Median :   1.00000             Median : 95.0000               Mode  :character               Median :23.00000             
- NA                             NA                             Mean   :2016                   Mean   :2.351407               Mean   : 5.412321              Mean   :28.59714               NA                             Driving Layup Shot : 160       NA                             Mean   :15.5826                Oklahoma City Thunder : 240    Mean   :   7.74619             Mean   :109.4331               NA                             Mean   :22.80457             
- NA                             NA                             3rd Qu.:2016                   3rd Qu.:3.000000               3rd Qu.: 8.000000              3rd Qu.:43.75000               NA                             Step Back Jump shot: 133       NA                             3rd Qu.:25.0000                Portland Trail Blazers: 238    3rd Qu.:  95.50000             3rd Qu.:198.0000               NA                             3rd Qu.:33.00000             
- NA                             NA                             Max.   :2016                   Max.   :4.000000               Max.   :11.000000              Max.   :59.00000               NA                             Running Layup Shot : 115       NA                             Max.   :71.0000                Memphis Grizzlies     : 225    Max.   : 246.00000             Max.   :717.0000               NA                             Max.   :48.00000             
- NA                             NA                             NA                             NA                             NA                             NA                             NA                             (Other)            :1139       NA                             NA                             (Other)               :2865    NA                             NA                             NA                             NA                           
-
-> sink()
+                 team_name     game_date             season         period      minutes_remaining seconds_remaining
+ Golden State Warriors:4334   Length:4334        Min.   :2016   Min.   :1.000   Min.   : 0.000    Min.   : 0.00    
+                              Class :character   1st Qu.:2016   1st Qu.:1.000   1st Qu.: 2.000    1st Qu.:13.00    
+                              Mode  :character   Median :2016   Median :2.000   Median : 5.000    Median :29.00    
+                                                 Mean   :2016   Mean   :2.351   Mean   : 5.412    Mean   :28.60    
+                                                 3rd Qu.:2016   3rd Qu.:3.000   3rd Qu.: 8.000    3rd Qu.:43.75    
+                                                 Max.   :2016   Max.   :4.000   Max.   :11.000    Max.   :59.00    
+                                                                                                                   
+  shot_made_flag              action_type            shot_type    shot_distance                     opponent   
+ shot_no :2243   Jump Shot          :2051   2PT Field Goal:2402   Min.   : 0.00   Houston Rockets       : 271  
+ shot_yes:2091   Pullup Jump shot   : 521   3PT Field Goal:1932   1st Qu.: 2.25   Sacramento Kings      : 249  
+                 Layup Shot         : 215                         Median :19.00   Los Angeles Clippers  : 246  
+                 Driving Layup Shot : 160                         Mean   :15.58   Oklahoma City Thunder : 240  
+                 Step Back Jump shot: 133                         3rd Qu.:25.00   Portland Trail Blazers: 238  
+                 Running Layup Shot : 115                         Max.   :71.00   Memphis Grizzlies     : 225  
+                 (Other)            :1139                                         (Other)               :2865  
+       x                  y             name               minute    
+ Min.   :-248.000   Min.   :-39.0   Length:4334        Min.   : 1.0  
+ 1st Qu.: -56.000   1st Qu.: 13.0   Class :character   1st Qu.:11.0  
+ Median :   1.000   Median : 95.0   Mode  :character   Median :23.0  
+ Mean   :   7.746   Mean   :109.4                      Mean   :22.8  
+ 3rd Qu.:  95.500   3rd Qu.:198.0                      3rd Qu.:33.0  
+ Max.   : 246.000   Max.   :717.0                      Max.   :48.0  
+                                                                     

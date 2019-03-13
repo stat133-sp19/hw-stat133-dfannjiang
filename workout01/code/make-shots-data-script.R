@@ -55,8 +55,7 @@ col_types <- c(
 
 # Read and clean and prepare data from each csv file
 for (i in 1:length(filenames)) {
-  p = filenames[i]
-  f = paste0(data_path, p, '.csv')
+  f = paste0(data_path, filenames[i], '.csv')
   dat = read.csv(f, stringsAsFactors = F, colClasses=col_types)
   
   dat$name = rep(players[i], nrow(dat))
@@ -66,7 +65,7 @@ for (i in 1:length(filenames)) {
   dat$minute <- 12*(dat$period - 1) + (12 - dat$minutes_remaining)
   
   # write summary of the data from each csv file to the output folder
-  sink(paste0(output_path, p, '-summary.txt'))
+  sink(paste0(output_path, filenames[i], '-summary.txt'))
   print(summary(dat))
   sink()
   
@@ -77,7 +76,7 @@ for (i in 1:length(filenames)) {
   }
 }
 
-all_data <- tibble(all_data)
+all_data <- as_tibble(all_data)
 
 # write all data to a csv file in the data folder
 write.csv(all_data, file=paste0(data_path, 'shots-data.csv'), row.names=FALSE)
@@ -91,5 +90,3 @@ sink()
 for (i in seq_len(sink.number())) {
   sink()
 }
-
-
