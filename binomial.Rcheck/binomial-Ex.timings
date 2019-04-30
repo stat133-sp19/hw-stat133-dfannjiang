@@ -1,0 +1,6 @@
+name	user	system	elapsed
+bin_choose	0.001	0.001	0.001	
+bin_cumulative	0.004	0.001	0.005	
+bin_distribution	0.001	0.000	0.002	
+bin_probability	0.001	0.000	0.001	
+bin_variable	0.000	0.001	0.000	

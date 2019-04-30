@@ -1,0 +1,77 @@
+---
+title: "Getting Started with binomial"
+author: "Dominic Fannjiang"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to binomial}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, echo = FALSE, message = FALSE}
+knitr::opts_chunk$set(collapse = T, comment = "#>")
+library(binomial)
+```
+
+## Working with the binomial distribution
+
+The package `"binomial"` is a minimal implementation for representing a binomial distribution and computing basic statistics and other information about it.
+
+
+### Creating a binomial random variable.
+
+You can create an object of class `binvar` that represents a binomial distribution by storing the 2 parameters needed (number of trials and chance of success) to define a binomial distribution:
+```{r}
+x <- bin_variable(5, 0.5)
+c(x$trials, x$prob, class(x))
+```
+```{r}
+x
+```
+
+Note that the above code is not necessary to use this library, but it's a convenient way to store the 2 parameters of your specific binomial distribution.
+
+### Gathering/plotting statisticss
+
+Below, you can obtain and visualize the probability distribution and/or cumulative probability distribution of your specific binomial distribution.
+```{r}
+bin_distribution(x$trials, x$prob)
+```
+```{r}
+plot(bin_distribution(x$trials, x$prob))
+```
+```{r}
+bin_cumulative(x$trials, x$prob)
+```
+```{r}
+plot(bin_cumulative(x$trials, x$prob))
+```
+
+For more statistics about your binomial distribution, use the generic method `summary`:
+```{r}
+summary(x)
+```
+
+Moreover, there some other basic functions available to you to calculate simple statistics of your binomial distribution:
+```{r}
+# calculates 5 choose 3
+bin_choose(5, 3)
+
+# calculates 5 choose 3, 5 choose 4
+bin_choose(5, 3:4)
+```
+```{r}
+# calculates the probability of 3 and 4 successes out of 5 trials
+# with 50% chance of success on each trial
+bin_probability(3:4, 5, 0.5)
+```
+```{r}
+# simple statistics
+bin_mean(trials=2, prob=0.5)
+bin_variance(trials=2, prob=0.5)
+bin_mode(trials=2, prob=0.5)
+bin_skewness(trials=2, prob=0.5)
+bin_kurtosis(trials=2, prob=0.5)
+```
+

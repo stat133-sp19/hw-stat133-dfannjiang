@@ -1,0 +1,11 @@
+bin_choose              Combinations of k successes in n trials
+bin_cumulative          Binomial probability distribution with
+                        cumulative probabilities
+bin_distribution        Binomial probability distribution
+bin_kurtosis            Kurtosis of binomial
+bin_mean                Mean of binomial distribution
+bin_mode                Mode of binomial distribution
+bin_probability         Probability of successes in a number of trials
+bin_skewness            Skewness of binomial
+bin_variable            Binomial random variable object
+bin_variance            Variance of binomial distribution
